@@ -1,0 +1,3 @@
+01,O'tkan kunlar,Abdulla Qodiriy,5,29.99
+02,Mehrobdan chayon,Mehrobdan chayon,3,39.99
+03,Kecha va kunduz,Cho'lpon,7,19.99

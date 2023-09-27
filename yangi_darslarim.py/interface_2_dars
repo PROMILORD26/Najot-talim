@@ -1,0 +1,57 @@
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+import sys
+from os import *
+system("cls")
+
+class Dastur(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        oyna = QWidget()
+        oyna.setFont(QFont("Calibri", 20))
+
+        self.setMaximumSize(2000, 1600)
+        self.setMinimumSize(1000, 800)
+
+        savol1 = QLabel("1.Test savoli", oyna)
+        savol1.resize(250,60)
+
+        asosiy_ver = QBoxLayout()
+
+        lbl1 = QRadioButton("Variant1")
+        lbl2 = QRadioButton("Variant2")
+        lbl3 = QRadioButton("Variant3")
+
+        asosiy_ver.addWidget(savol1)
+
+        qh = QHBoxLayout()
+        qh.addWidget(lbl1)
+        qh.addWidget(lbl2)
+        qh.addWidget(lbl3)
+        asosiy_ver.addLayout(qh)
+        oyna.setLayout(qh)
+        self.setCentralWidget(oyna)
+
+
+
+        savol = QLabel("2.Test savoli", oyna)
+        savol.resize(250,60)
+        savol.move(25, 200)
+
+        lbl4 = QRadioButton("Variant1")
+        lbl5 = QRadioButton("Variant2")
+        lbl6 = QRadioButton("Variant3")
+
+        qv = QVBoxLayout()
+        qv.addWidget(lbl4)
+        qv.addWidget(lbl5)
+        qv.addWidget(lbl6)
+        oyna.setLayout(qv)
+        self.setCentralWidget(oyna)
+
+if __name__ == "__main__":
+    app = QApplication([])
+    dastur = Dastur()
+    dastur.show()
+    sys.exit(app.exec_())        
